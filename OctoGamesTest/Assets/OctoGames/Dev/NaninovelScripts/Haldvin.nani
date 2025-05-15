@@ -1,0 +1,58 @@
+@goto Haldvin.Start if:VillageState=0
+@goto Haldvin.Repeat if:VillageState=1
+@goto Haldvin.Return if:VillageState=2
+
+# Start
+@stopBgm
+@bgm Village
+@char Haldvin
+Haldvin: Ах, путник! Как кстати ты пришёл. Беда у нас… Пропала древняя реликвия — Сердце Холмов. Говорят, её видели у старого отшельника в горах.
+Player: Что за реликвия такая?
+Haldvin.Sad: Камень, что приносил удачу деревне. Пока он был у нас — и урожай был щедр, и зверь обходил стороной. Найди отшельника — он живёт к северу, в Роще Угасающих Костров.
+@set "questName=\"Поиск отшельника\";questDesc=\"Нужно найти отшельника, который живет в роще.\""
+
+@showUI Map
+@hide Haldvin
+@hidePrinter 
+@set VillageState=1
+@stop
+
+# Return
+@stopBgm
+@bgm Village
+@char Haldvin
+@char Ambert
+@hide Forest
+@show Village
+Haldvin: Ты вернулся! Нашёл ли ты реликвию?
+@choice "Отдать Хальдвину" goto:.RelicHaldvin
+@choice "Отдать Эмберту" goto:.RelicAmbert
+@choice "Оставить себе" goto:.RelicNobody
+@stop
+
+# Repeat
+@stopBgm
+@bgm Village
+@char Haldvin
+Haldvin: Найди отшельника — он живёт к северу, в Роще Угасающих Костров.
+@hide Haldvin
+@hidePrinter 
+@stop
+
+# RelicHaldvin
+Haldvin.Happy: Слава тебе! Деревня будет благодарна тебе вовеки! 
+Ambert.Sad: Так ты всё же выбрал золото деревенской славы? Как низко…
+@set questName="finish"
+@stop
+
+# RelicAmbert
+Ambert.Happy: Ты мудр. Людская жадность не стоит духа этого места.
+Haldvin.Sad: Что?! Ты отдал реликвию этому чудаку? Деревне теперь конец…
+@set questName="finish"
+@stop
+
+# RelicNobody
+Haldvin.Sad: Ты смеёшься? Это наше достояние!
+Ambert.Sad: Ты оказался таким же, как все… жаль.
+@set questName="finish"
+@stop

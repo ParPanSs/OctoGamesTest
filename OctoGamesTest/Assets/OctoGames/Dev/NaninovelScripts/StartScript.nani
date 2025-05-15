@@ -1,0 +1,4 @@
+@back Village id:Village
+@input PlayerName summary:"Choose your name."
+@stop
+@goto Haldvin

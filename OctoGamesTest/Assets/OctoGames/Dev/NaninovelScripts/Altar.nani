@@ -1,0 +1,12 @@
+@goto Haldvin if:ForestState=0
+@goto Altar.Start if:AltarState=0
+@goto Ambert.Return if:AltarState=1
+
+# Start
+@stopBgm
+@bgm Altar
+@back Grove id:Grove
+@shake Camera power:3
+@Rain power:1500
+@choice "Взять Сердце" set:AltarState=1;questName="Возвращение";questDesc="Сердце у меня. Вернусь к отшельнику." goto:Ambert.Return
+@stop

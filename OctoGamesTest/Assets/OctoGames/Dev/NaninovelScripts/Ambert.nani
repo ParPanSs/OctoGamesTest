@@ -1,0 +1,61 @@
+@goto Ambert.Start if:ForestState=0
+@goto Ambert.Repeat if:ForestState=1
+@goto Ambert.Return if:ForestState=2
+
+# Start
+@stopBgm
+@bgm Forest
+@hide Haldvin
+@hideUI Map
+@back Forest.Empty id:Forest
+@char Ambert
+Ambert: Ты чего пришёл, чужак? Не часто ко мне люди ходят.
+Player: Я ищу Сердце Холмов. Говорят, оно у тебя.
+Ambert: Не врёт людская молва — оно у меня. Но просто так я его не отдам. Испытай себя — собери символы стихий из моего сада и докажи, что достоин.
+
+@hideAll
+@stopBgm
+@back Table id:Table
+@spawn MiniGame
+@stop
+
+# GameWon
+@stopBgm
+@bgm Forest
+@despawn MiniGame
+@hide Table
+@show Forest
+@show Ambert
+Ambert.Happy: Хм… будь ты победителем или нет, ты не отступил. Это уже многое говорит.
+Player: Значит, ты отдашь мне реликвию?
+Ambert: Почти. Последний шаг — активировать алтарь Вечной Скалы. Он рядом. Только тогда Сердце отзовётся на зов.
+@set questName="К алтарю"
+@set questDesc="Отшельник сказал, что Сердце отзовется только после активации алтаря."
+@showUI Map
+@hide Ambert
+@hidePrinter
+@set ForestState=1
+@stop
+
+# Repeat
+@stopBgm
+@bgm Forest
+@char Ambert
+Ambert: Последний шаг — активировать алтарь Вечной Скалы. Он рядом. Только тогда Сердце отзовётся на зов.
+@hide Ambert
+@hidePrinter
+@stop
+
+# Return
+@stopBgm
+@hide Grove
+@back Forest.Empty id:Forest
+@bgm Forest
+@hideUI Map
+Player: Эмберта нет… Похоже, ушёл. Но следы костра ещё тёплые. Что ж, теперь мне решать — отдать реликвию Хальдвину… или оставить её себе?
+@set VillageState=2
+@set questName="Вернуть Сердце"
+@set questDesc="Пора возвращаться в деревню."
+@hidePrinter
+@showUI Map
+@stop

@@ -88,6 +88,9 @@ MonoBehaviour:
     - name: Blur
       pathPrefix: Spawn
       guid: e466d9326b30a4b49a3dad428b4d9968
+    - name: MiniGame
+      pathPrefix: Spawn
+      guid: 9823083b5e3ac42969d1e5572157c93f
   - Id: UI
     Resources:
     - name: ClickThroughPanel
@@ -144,5 +147,82 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+    - name: Map
+      pathPrefix: UI
+      guid: 0053f9ea01324465c8b883e948c3a279
   - Id: Scripts
+    Resources:
+    - name: StartScript
+      pathPrefix: Scripts
+      guid: 248cbcc4dd9bd4699916fef4a6c52dd2
+    - name: Haldvin
+      pathPrefix: Scripts
+      guid: bc639348a1e8b40aaba4401790892d5d
+    - name: Ambert
+      pathPrefix: Scripts
+      guid: 3d18c70ad34f24cd1b190b16af33e6a4
+    - name: Altar
+      pathPrefix: Scripts
+      guid: d120d16540894428b8e6e40e167accb9
+  - Id: Characters/4259f0aa-64ea-41c5-92c2-85029ae49949
+    Resources:
+    - name: Normal
+      pathPrefix: Characters/Haldvin
+      guid: 2d72c8fd7cc31405a9cf72237f1783d9
+    - name: Happy
+      pathPrefix: Characters/Haldvin
+      guid: 9421d2b2ec78842af94ea4d9dd017c16
+    - name: Sad
+      pathPrefix: Characters/Haldvin
+      guid: 9dd7fbdd1c9c0461d9e539e0c626a1e8
+  - Id: Characters/40974673-025a-402a-b4a4-15c2880d94d2
     Resources: []
+  - Id: Backgrounds/7c8cedc2-92db-4436-9ea4-2dbfc7152691
+    Resources: []
+  - Id: Backgrounds/5bd233bd-bfca-4264-b631-5b703aedfeb6
+    Resources:
+    - name: Village
+      pathPrefix: Backgrounds/Village
+      guid: 16bdfd02dad6049ceabb13de9bb632e8
+  - Id: Backgrounds/a876f87a-7a3e-4ce3-b2aa-a97a84d83de8
+    Resources:
+    - name: Forest
+      pathPrefix: Backgrounds/Forest
+      guid: 11b32c797a16a435a98eaec15528e056
+    - name: Empty
+      pathPrefix: Backgrounds/Forest
+      guid: e525bd10a69d44d66899c7be9651b03e
+  - Id: Backgrounds/033eecee-ee1a-4b43-9e7b-b16822a8d955
+    Resources:
+    - name: Grove
+      pathPrefix: Backgrounds/Grove
+      guid: 8c489dc6a70764aec9813c3bb46a8ac8
+  - Id: Characters/fdb5a7df-e18e-48c8-8d12-6e144781e702
+    Resources:
+    - name: Normal
+      pathPrefix: Characters/Ambert
+      guid: 6fd2e06fb1edb457db6375e20d3fedb0
+    - name: Sad
+      pathPrefix: Characters/Ambert
+      guid: a3b52761fa3154317b596faef9bdc40a
+    - name: Happy
+      pathPrefix: Characters/Ambert
+      guid: 5c68fe8dcebdb40339637ecc9fc17cdd
+  - Id: Backgrounds/c0853013-c28d-4fd9-b3cc-0fce26699fa4
+    Resources:
+    - name: Table
+      pathPrefix: Backgrounds/Table
+      guid: bdf3eea64e7db4fc6a015fac008b25bc
+  - Id: Movies
+    Resources: []
+  - Id: Audio
+    Resources:
+    - name: Village
+      pathPrefix: Audio
+      guid: 257eb4eb4a6ba48f3b2752af4a34f753
+    - name: Forest
+      pathPrefix: Audio
+      guid: aab7b5cb502844682b5ceffa7079518c
+    - name: Altar
+      pathPrefix: Audio
+      guid: 0f4e22f8657e84696ab05ead89f18f1d
