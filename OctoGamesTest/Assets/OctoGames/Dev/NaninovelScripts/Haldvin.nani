@@ -43,16 +43,19 @@ Haldvin: Найди отшельника — он живёт к северу, в
 Haldvin.Happy: Слава тебе! Деревня будет благодарна тебе вовеки! 
 Ambert.Sad: Так ты всё же выбрал золото деревенской славы? Как низко…
 @set questName="finish"
+@hideUI Map
 @stop
 
 # RelicAmbert
 Ambert.Happy: Ты мудр. Людская жадность не стоит духа этого места.
 Haldvin.Sad: Что?! Ты отдал реликвию этому чудаку? Деревне теперь конец…
 @set questName="finish"
+@hideUI Map
 @stop
 
 # RelicNobody
 Haldvin.Sad: Ты смеёшься? Это наше достояние!
 Ambert.Sad: Ты оказался таким же, как все… жаль.
 @set questName="finish"
+@hideUI Map
 @stop
